@@ -49,13 +49,13 @@ class Submission:
         # print(comments[0]["author_name"], comments[0]["comment"],
         #       list(attachment.url for attachment in submission.attachments), submission.submitted_at)
 
-        self.comment_text = submission_object.submission_comments[0]["comment"].replace("\n", "")
+        self.comment_text = submission_object.submission_comments[-1]["comment"].replace("\n", "")
         self.comment_list = self.comment_text[1:].split("~")
-        self.submission_class = self.comment_list[0].lower()
-        self.due_date = self.comment_list[1]
-        self.feedback_type = self.comment_list[2].lower()
-        self.rubric = self.comment_list[3].lower()
-        self.student_name = submission_object.submission_comments[0]["author_name"]
+        self.submission_class = self.comment_list[0].lower().strip(" ")
+        self.due_date = self.comment_list[1].strip(" ")
+        self.feedback_type = self.comment_list[2].lower().strip(" ")
+        self.rubric = self.comment_list[3].lower().strip(" ")
+        self.student_name = submission_object.submission_comments[-1]["author_name"]
         self.student_id = submission_object.user_id
         self.submission_time = datetime.strptime(str(submission_object.submitted_at), "%Y-%m-%dT%H:%M:%SZ").replace(
             tzinfo=timezone.utc).astimezone(tz=pytz.timezone('US/Pacific'))
