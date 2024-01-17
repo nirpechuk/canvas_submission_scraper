@@ -26,7 +26,7 @@ def invalid_message(error, assignment, week, debug=False):
                         {
                             "type": "TextBlock",
                             "wrap": "true",
-                            "text": f"<at>{name}</at>, {assignment}, Week {week}, Error: {error}"
+                            "text": f"<at>{name}</at>, {assignment}, Assignment Name: {week}, Error: {error}"
                         }
                     ],
                     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
@@ -73,7 +73,7 @@ def assignment_message(name, email, assignment, week, due, debug=False):
                         {
                             "type": "TextBlock",
                             "wrap": "true",
-                            "text": f"<at>{name}</at>, {assignment}, Week {week}, Feedback Due {due} @ 4:00 pm"
+                            "text": f"<at>{name}</at>, {assignment}, Assignment Name: {week}, Feedback Due {due} @ 4:00 pm"
                         }
                     ],
                     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
