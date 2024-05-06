@@ -26,9 +26,9 @@ def choose_nerd(current, nerdlist):
     return max(scores, key=scores.get)
 
 
-# Get into DAO canvas
-API_URL = "https://davidsononline.instructure.com/"
-API_KEY = "22471~IICIQmCEWpwSKRk8eB0531zGD0hA9hvicDNdSEaZp2fOIoexBj6L6I9mqCwbzsLp"
+# Get into your canvas
+API_URL = "" # [insert your link here]
+API_KEY = "" # [insert your api key here]
 canvas = Canvas(API_URL, API_KEY)
 
 # Get the Writing Center Course object
