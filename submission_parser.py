@@ -4,8 +4,7 @@ import pytz
 
 
 class FakeSubmission:
-    # current = FakeSubmission("~RLA~12/31/2023~Written~Uploaded~Conclusion", "Olga Pechuk", "id here",
-    #                      "2023-12-10T20:45:46Z")
+
     def __init__(self, comment, student_name, student_id, submission_time):
         self.comment_list = comment[1:].split("~")
         self.submission_class = self.comment_list[0].lower()
