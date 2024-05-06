@@ -13,27 +13,26 @@ no = -10000
 yes = 1
 weekend = "weekend"
 weekday = "weekday"
-RLA = "rla"
-CNA = "cna"
-SND = "snd"
 live = "live"
 written = "written"
 
-nir = Nerd("Nir Pechuk",
-           "npechuk@davidsononline.org",
+nir = Nerd("[nerd name]",
+           "[nerd email]",
            {weekend: no, weekday: neutral},
-           {RLA: yes, CNA: no, SND: neutral},
-           {live: no, written: neutral}, {})
-michael = Nerd("Michael Pechuk",
-               "npechuk@davidsononline.org",
-               {weekend: no, weekday: neutral},
-               {RLA: no, CNA: yes, SND: neutral},
-               {live: no, written: neutral}, {"Lincoln Frankel": no})
-ron = Nerd("Ron Pechuk",
-           "npechuk@davidsononline.org",
-           {weekend: no, weekday: neutral},
-           {RLA: neutral, CNA: no, SND: neutral},
+           {[class]: neutral, [class]: no, [class]: neutral},
            {live: no, written: neutral},
-           {"Olga Pechuk": yes})
+           {"[preference person]": yes})
+michael = Nerd("[nerd name]",
+           "[nerd email]",
+           {weekend: no, weekday: neutral},
+           {[class]: neutral, [class]: no, [class]: neutral},
+           {live: no, written: neutral},
+           {"[preference person]": yes})
+ron = Nerd("[nerd name]",
+           "[nerd email]",
+           {weekend: no, weekday: neutral},
+           {[class]: neutral, [class]: no, [class]: neutral},
+           {live: no, written: neutral},
+           {"[preference person]": yes})
 
 nerdlist = [nir, michael, ron]
